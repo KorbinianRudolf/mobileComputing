@@ -21,6 +21,8 @@ inputNode.addEventListener('change', playSelectedFile, false);
 //end code music player
 
 /*
+
+//not yet sure, if i need it or if i don't want/need to use it
 window.ondevicemotion = function(event) {
     const ax = Math.round((event.accelerationIncludingGravity.x));
     const ay = Math.round((event.accelerationIncludingGravity.y));
