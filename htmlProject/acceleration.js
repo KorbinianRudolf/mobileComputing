@@ -32,8 +32,15 @@ window.addEventListener("deviceorientation", function(event) {
     const alpha = Math.round(event.alpha);
     const beta = Math.round(event.beta);
     const gamma = Math.round(event.gamma);
-    let out = "play";
 
+    playPause(event);
+
+    document.querySelector("#mag").innerHTML = "alpha = " + alpha + "<br>" + "beta = " + beta + "<br>" + "gamma = " + gamma;
+}, true);
+
+function playPause(event) {
+    const beta = Math.round(event.beta);
+    let out = "play";
     if(Math.abs(beta) > 170) {
         out = "pause";
         player.pause()
@@ -41,8 +48,5 @@ window.addEventListener("deviceorientation", function(event) {
         out = "play";
         player.play();
     }
-
     document.querySelector("#status").innerHTML = out;
-
-    document.querySelector("#mag").innerHTML = "alpha = " + alpha + "<br>" + "beta = " + beta + "<br>" + "gamma = " + gamma;
-}, true);
+}
