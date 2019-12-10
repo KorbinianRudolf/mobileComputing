@@ -1,3 +1,21 @@
+// code music player
+
+var player = document.getElementById('music');
+
+function playSelectedFile(event) {
+    var file = this.files[0],
+    type = file.type,
+    canPlay = player.canPlayType(type);
+
+    if(canPlay)
+        player.src = URL.createObjectURL(file);
+}
+
+var inputNode = document.querySelector('input');
+inputNode.addEventListener('change', playSelectedFile, false);
+
+//end code music player
+
 window.ondevicemotion = function(event) {
     const ax = Math.round((event.accelerationIncludingGravity.x));
     const ay = Math.round((event.accelerationIncludingGravity.y));
