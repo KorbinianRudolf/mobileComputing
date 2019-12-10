@@ -11,9 +11,15 @@ window.ondevicemotion = function(event) {
 window.addEventListener("deviceorientation", function(event) {
     const alpha = Math.round(event.alpha);
     const beta = Math.round(event.beta);
-    const gamma = Math.round(event.beta);
+    const gamma = Math.round(event.gamma);
+    let out = "play";
+    if(gamma < 190 && gamma > 170) {
+        out = "pause";
+    } else {
+        out = "play";
+    }
 
-
+    document.querySelector("#status").innerHTML = out;
 
     document.querySelector("#mag").innerHTML = "alpha = " + alpha + "<br>" + "beta = " + beta + "<br>" + "gamma = " + gamma;
 }, true);
