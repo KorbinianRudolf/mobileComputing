@@ -13,12 +13,13 @@ window.addEventListener("deviceorientation", function(event) {
     const beta = Math.round(event.beta);
     const gamma = Math.round(event.gamma);
     let out = "play";
+    document.querySelector("#debug").innerHTML = (Math.abs(beta) > 170).toString();
     if(Math.abs(beta) > 170) {
         out = "pause";
     } else {
         out = "play";
     }
-    document.querySelector("#debug").innerHTML = event.absolute.toString();
+
     document.querySelector("#status").innerHTML = out;
 
     document.querySelector("#mag").innerHTML = "alpha = " + alpha + "<br>" + "beta = " + beta + "<br>" + "gamma = " + gamma;
