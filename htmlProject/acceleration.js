@@ -2,6 +2,10 @@
 
 var player = document.getElementById('music');
 
+/**
+ * autostart to play the selected file
+ * @param event
+ */
 function playSelectedFile(event) {
     var file = this.files[0],
     type = file.type,
@@ -28,6 +32,7 @@ window.ondevicemotion = function(event) {
 
 */
 
+//eventListener for the rotation
 window.addEventListener("deviceorientation", function(event) {
     const alpha = Math.round(event.alpha);
     const beta = Math.round(event.beta);
@@ -39,14 +44,21 @@ window.addEventListener("deviceorientation", function(event) {
     document.querySelector("#mag").innerHTML = "alpha = " + alpha + "<br>" + "beta = " + beta + "<br>" + "gamma = " + gamma;
 }, true);
 
-//change the volume depending on the rotation of the alpha z axis
+
+/**
+ * change the volume depending on the rotation of the alpha z axis
+ * @param event
+ */
 function volume(event) {
     const alpha = Math.round(event.alpha);
     player.volume = alpha / 360;
 
 }
 
-//pause the music if the mobile phone lies on the display, so the x axis is rotated 180 Degrees (+-10 Degreess
+/**
+ * pause the music if the mobile phone lies on the display, so the x axis is rotated 180 Degrees (+-10 Degreess
+ * @param event
+ */
 function playPause(event) {
     const beta = Math.round(event.beta);
     let out = "play";
