@@ -34,10 +34,19 @@ window.addEventListener("deviceorientation", function(event) {
     const gamma = Math.round(event.gamma);
 
     playPause(event);
+    volume(event);
 
     document.querySelector("#mag").innerHTML = "alpha = " + alpha + "<br>" + "beta = " + beta + "<br>" + "gamma = " + gamma;
 }, true);
 
+//change the volume depending on the rotation of the alpha z axis
+function volume(event) {
+    const alpha = Math.round(event.alpha);
+    player.volume = alpha / 360;
+
+}
+
+//pause the music if the mobile phone lies on the display, so the x axis is rotated 180 Degrees (+-10 Degreess
 function playPause(event) {
     const beta = Math.round(event.beta);
     let out = "play";
