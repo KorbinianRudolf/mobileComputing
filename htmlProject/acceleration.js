@@ -18,7 +18,7 @@ window.addEventListener("deviceorientation", function(event) {
     } else {
         out = "play";
     }
-
+    document.querySelector("#debug").innerHTML = event.absolute.toString();
     document.querySelector("#status").innerHTML = out;
 
     document.querySelector("#mag").innerHTML = "alpha = " + alpha + "<br>" + "beta = " + beta + "<br>" + "gamma = " + gamma;
