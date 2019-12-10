@@ -16,6 +16,7 @@ inputNode.addEventListener('change', playSelectedFile, false);
 
 //end code music player
 
+/*
 window.ondevicemotion = function(event) {
     const ax = Math.round((event.accelerationIncludingGravity.x));
     const ay = Math.round((event.accelerationIncludingGravity.y));
@@ -25,6 +26,7 @@ window.ondevicemotion = function(event) {
 
 };
 
+*/
 
 window.addEventListener("deviceorientation", function(event) {
     const alpha = Math.round(event.alpha);
@@ -34,8 +36,10 @@ window.addEventListener("deviceorientation", function(event) {
 
     if(Math.abs(beta) > 170) {
         out = "pause";
+        player.pause()
     } else {
         out = "play";
+        player.play();
     }
 
     document.querySelector("#status").innerHTML = out;
