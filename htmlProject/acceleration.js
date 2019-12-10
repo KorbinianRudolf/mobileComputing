@@ -13,7 +13,7 @@ window.addEventListener("deviceorientation", function(event) {
     const beta = Math.round(event.beta);
     const gamma = Math.round(event.gamma);
     let out = "play";
-    if(Math.abs(gamma) > 170) {
+    if(Math.abs(beta) > 170) {
         out = "pause";
     } else {
         out = "play";
