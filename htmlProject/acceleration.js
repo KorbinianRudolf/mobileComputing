@@ -1,7 +1,7 @@
 window.ondevicemotion = function(event) {
-    var ax = event.accelerationIncludingGravity.x;
-    var ay = event.accelerationIncludingGravity.y;
-    var az = event.accelerationIncludingGravity.z;
+    var ax = event.acceleration.x;
+    var ay = event.acceleration.y;
+    var az = event.acceleration.z;
 
     document.querySelector("#acc").innerHTML = "X = " + ax + "<br>" + "Y = " + ay + "<br>" + "Z = " + az;
 };
