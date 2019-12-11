@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Music Player</title>
+    <link id ="css" rel = "stylesheet" type="text/css" href="css/music.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src = "acceleration.js" async></script>
 </head>
 <body>
-    <p id="acc">EMPTY</p>
-    <p id="status"></p>
-    <p id="mag">EMPTY</p>
-    <p id="debug"></p>
-
-    <input type="file" accept="audio/*"/>
-    <div id="message"></div>
-    <audio id="music" controls>
-        Your browser does not support the audio format.
-    </audio>
+    <header>
+        <h1>
+            Music Player with rotation control
+        </h1>
+    </header>
+    <main>
+        <input id="input" type="file" accept="audio/*"/>
+        <div id="message"></div>
+        <audio id="music" autoplay="autoplay">
+            Your Browser does not support that audio format.
+        </audio>
+    </main>
 </body>
 </html>
