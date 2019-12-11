@@ -41,7 +41,7 @@ window.addEventListener("deviceorientation", function(event) {
     const gamma = Math.round(event.gamma);
 
     playPause(event);
-    volume(event);
+    volume(alpha);
 
     document.querySelector("#mag").innerHTML = "alpha = " + alpha + "<br>" + "beta = " + beta + "<br>" + "gamma = " + gamma;
 }, true);
@@ -51,8 +51,7 @@ window.addEventListener("deviceorientation", function(event) {
  * change the volume depending on the rotation of the alpha z axis
  * @param event
  */
-function volume(event) {
-    const alpha = Math.round(event.alpha);
+function volume(alpha) {
     player.volume = (alpha / 360);
     document.querySelector('#volume').innerHTML ="Volume: " + player.volume.toString();
     document.querySelector('#alpha').innerHTML = alpha.toString();
