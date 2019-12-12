@@ -59,7 +59,7 @@ window.addEventListener("deviceorientation", function(event) {
 function volume(alpha) {
     console.log(alpha.toString());
     player.volume = (alpha / 360);
-    document.querySelector('#volume').innerHTML ="Volume: " + Math.round(player.volume).toString();
+    document.querySelector('#volume').innerHTML ="Volume: " + Math.round(player.volume * 100).toString() + "%";
     document.querySelector('#alpha').innerHTML = alpha.toString();
 
 }
