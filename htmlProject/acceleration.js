@@ -37,8 +37,8 @@ window.ondevicemotion = function(event) {
 //eventListener for the rotation
 window.addEventListener("deviceorientation", function(event) {
     const alpha = Math.round(event.alpha);
-    const beta = Math.round(event.beta);
-    const gamma = Math.round(event.gamma);
+    //const beta = Math.round(event.beta);
+    //const gamma = Math.round(event.gamma);
 
     playPause(event);
     volume(alpha);
@@ -54,7 +54,7 @@ window.addEventListener("deviceorientation", function(event) {
 function volume(alpha) {
     console.log(alpha.toString());
     player.volume = (alpha / 360);
-    document.querySelector('#volume').innerHTML ="Volume: " + player.volume.toString();
+    document.querySelector('#volume').innerHTML ="Volume: " + Math.round(player.volume).toString();
     document.querySelector('#alpha').innerHTML = alpha.toString();
 
 }
