@@ -1,6 +1,7 @@
 // code music player
 
 var player = document.getElementById('music');
+let songChoosen = false;
 
 /**
  * autostart to play the selected file
@@ -11,8 +12,12 @@ function playSelectedFile(event) {
     type = file.type,
     canPlay = player.canPlayType(type);
 
-    if(canPlay)
+    if(canPlay){
         player.src = URL.createObjectURL(file);
+        songChoosen = true;
+    }
+
+
 }
 
 var inputNode = document.querySelector('input');
@@ -65,13 +70,15 @@ function volume(alpha) {
  */
 function playPause(event) {
     const beta = Math.round(event.beta);
-    let out = "play";
-    if(Math.abs(beta) > 170) {
-        out = "pause";
-        player.pause()
-    } else {
-        out = "play";
-        player.play();
+    let out = "choose Song";
+    if(songChoosen) {
+        if (Math.abs(beta) > 170) {
+            out = "pause";
+            player.pause()
+        } else {
+            out = "play";
+            player.play();
+        }
     }
     document.querySelector("#message").innerHTML = out;
 }
