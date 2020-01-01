@@ -27,7 +27,8 @@ inputNode.addEventListener('change', playSelectedFile, false);
 
 /*
 
-//not yet sure, if i need it or if i don't want/need to use it
+//not quit sure, whether i need this code or not. But maybe useful for other stuff
+//eventListener for device Motion
 window.ondevicemotion = function(event) {
     const ax = Math.round((event.accelerationIncludingGravity.x));
     const ay = Math.round((event.accelerationIncludingGravity.y));
