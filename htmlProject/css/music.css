@@ -70,7 +70,7 @@ header {
 }
 
 #controls {
-    text-align: center;
+    text-align: left;
 }
 
 #input {
@@ -79,7 +79,7 @@ header {
 }
 
 .info {
-    text-align: center;
+    text-align: left;
     margin-top: 1rem;
 }
 
