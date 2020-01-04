@@ -50,7 +50,7 @@ window.addEventListener("deviceorientation", function(event) {
 
     playPause(event);
     volume(alpha);
-    document.querySelector('#alpha').innerHTML = alpha.toString();
+    //document.querySelector('#alpha').innerHTML = alpha.toString();
     //document.querySelector("#mag").innerHTML = "alpha = " + alpha + "<br>" + "beta = " + beta + "<br>" + "gamma = " + gamma;
 }, true);
 
