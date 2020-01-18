@@ -31,7 +31,6 @@ inputNode.addEventListener('change', playSelectedFile, false);
 window.addEventListener("deviceorientation", function(event) {
 
     const alpha = Math.round(event.alpha);
-
     playPause(Math.round(event.beta));
     volume(alpha);
 
