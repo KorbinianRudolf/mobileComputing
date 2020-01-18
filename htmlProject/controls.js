@@ -44,7 +44,7 @@ window.ondevicemotion = function(event) {
 window.addEventListener("deviceorientation", function(event) {
 
     const alpha = Math.round(event.alpha);
-    document.getElementById('alpha').innerText = alpha.toString();
+    //document.getElementById('alpha').innerText = alpha.toString();
     //const beta = Math.round(event.beta);
     //const gamma = Math.round(event.gamma);
 
@@ -63,7 +63,6 @@ function volume(alpha) {
     player.volume =  1 - (alpha / 360);
     document.querySelector('#volume').innerHTML ="Volume: " + Math.round(player.volume * 100).toString() + "%";
 
-
 }
 
 /**
@@ -72,15 +71,15 @@ function volume(alpha) {
  */
 function playPause(event) {
     const beta = Math.round(event.beta);
-    let out = "choose Song";
+    //let out = "choose Song";
     if(songChoosen) {
         if (Math.abs(beta) > 170) {
-            out = "pause";
+            //out = "pause";
             player.pause()
         } else {
-            out = "play";
+            //out = "play";
             player.play();
         }
     }
-    document.querySelector("#message").innerHTML = out;
+  //  document.querySelector("#message").innerHTML = out;
 }
