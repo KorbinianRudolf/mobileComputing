@@ -44,11 +44,10 @@ window.ondevicemotion = function(event) {
 window.addEventListener("deviceorientation", function(event) {
 
     const alpha = Math.round(event.alpha);
-    document.getElementById('alpha').innerText = alpha.toString();
 
     playPause(event);
     volume(alpha);
-    //document.querySelector('#alpha').innerHTML = alpha.toString();
+    document.querySelector('#alpha').innerHTML = alpha.toString();
 }, true);
 
 
@@ -68,15 +67,15 @@ function volume(alpha) {
  */
 function playPause(event) {
     const beta = Math.round(event.beta);
-    //let out = "choose Song";
+    let out = "choose Song";
     if(songChoosen) {
         if (Math.abs(beta) > 170) {
-            //out = "pause";
+            out = "pause";
             player.pause()
         } else {
-            //out = "play";
+            out = "play";
             player.play();
         }
     }
-  //  document.querySelector("#message").innerHTML = out;
+    document.querySelector("#message").innerHTML = out;
 }
