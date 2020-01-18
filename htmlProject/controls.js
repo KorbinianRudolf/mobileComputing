@@ -44,14 +44,11 @@ window.ondevicemotion = function(event) {
 window.addEventListener("deviceorientation", function(event) {
 
     const alpha = Math.round(event.alpha);
-    //document.getElementById('alpha').innerText = alpha.toString();
-    //const beta = Math.round(event.beta);
-    //const gamma = Math.round(event.gamma);
+    document.getElementById('alpha').innerText = alpha.toString();
 
     playPause(event);
     volume(alpha);
     //document.querySelector('#alpha').innerHTML = alpha.toString();
-    //document.querySelector("#mag").innerHTML = "alpha = " + alpha + "<br>" + "beta = " + beta + "<br>" + "gamma = " + gamma;
 }, true);
 
 
