@@ -53,17 +53,17 @@ function volume(alpha) {
  * @param beta
  */
 function playPause(beta) {
-    let out = "choose Song";
+    //let out = "choose Song";
     if(songChoosen) {
         if (Math.abs(beta) > 170) {
-            out = "pause";
+            //out = "pause";
             player.pause()
         } else {
-            out = "play";
+            //out = "play";
             player.play();
         }
     }
-    document.querySelector("#message").innerText = out;
+    //document.querySelector("#message").innerText = out;
 }
 
 /*
