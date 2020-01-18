@@ -25,20 +25,7 @@ inputNode.addEventListener('change', playSelectedFile, false);
 
 //end code music player
 
-/*
 
-//not quit sure, whether i need this code or not. But maybe useful for other stuff
-//eventListener for device Motion
-window.ondevicemotion = function(event) {
-    const ax = Math.round((event.accelerationIncludingGravity.x));
-    const ay = Math.round((event.accelerationIncludingGravity.y));
-    const az = Math.round((event.accelerationIncludingGravity.z));
-
-    document.querySelector("#acc").innerHTML = "X = " + ax + "<br>" + "Y = " + ay + "<br>" + "Z = " + az;
-
-};
-
-*/
 
 //eventListener for the rotation
 window.addEventListener("deviceorientation", function(event) {
@@ -67,15 +54,30 @@ function volume(alpha) {
  */
 function playPause(event) {
     const beta = Math.round(event.beta);
-    //let out = "choose Song";
+    let out = "choose Song";
     if(songChoosen) {
         if (Math.abs(beta) > 170) {
-            //out = "pause";
+            out = "pause";
             player.pause()
         } else {
-            //out = "play";
+            out = "play";
             player.play();
         }
     }
-    //document.querySelector("#message").innerText = out;
+    document.querySelector("#message").innerText = out;
 }
+
+/*
+
+//not quit sure, whether i need this code or not. But maybe useful for other stuff
+//eventListener for device Motion
+window.ondevicemotion = function(event) {
+    const ax = Math.round((event.accelerationIncludingGravity.x));
+    const ay = Math.round((event.accelerationIncludingGravity.y));
+    const az = Math.round((event.accelerationIncludingGravity.z));
+
+    document.querySelector("#acc").innerHTML = "X = " + ax + "<br>" + "Y = " + ay + "<br>" + "Z = " + az;
+
+};
+
+*/
