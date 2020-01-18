@@ -43,7 +43,6 @@ window.ondevicemotion = function(event) {
 //eventListener for the rotation
 window.addEventListener("deviceorientation", function(event) {
 
-    document.querySelector('#alpha').innerHTML = event.absolute.toString();
     const alpha = Math.round(event.alpha);
     //const beta = Math.round(event.beta);
     //const gamma = Math.round(event.gamma);
