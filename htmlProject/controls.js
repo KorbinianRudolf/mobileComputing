@@ -32,7 +32,7 @@ window.addEventListener("deviceorientation", function(event) {
 
     const alpha = Math.round(event.alpha);
     //document.querySelector('#alpha').innerHTML = alpha.toString();
-    playPause(event);
+    playPause(Math.round(event.beta));
     volume(alpha);
 
 }, true);
@@ -50,10 +50,9 @@ function volume(alpha) {
 
 /**
  * pause the music if the mobile phone lies on the display, so the x axis is rotated 180 Degrees (+-10 Degreess
- * @param event
+ * @param beta
  */
-function playPause(event) {
-    const beta = Math.round(event.beta);
+function playPause(beta) {
     let out = "choose Song";
     if(songChoosen) {
         if (Math.abs(beta) > 170) {
