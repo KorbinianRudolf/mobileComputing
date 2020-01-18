@@ -77,5 +77,5 @@ function playPause(event) {
             player.play();
         }
     }
-    document.querySelector("#message").innerHTML = out;
+    document.querySelector("#message").innerText = out;
 }
