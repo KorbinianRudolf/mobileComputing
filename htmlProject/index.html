@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name = "viewport" content = "width, initial-scale= 1.0">
     <title>Music Player</title>
-    <link id ="css" rel = "stylesheet" type="text/css" href="css/musicLight.css">
+    <link id ="mainCss" rel = "stylesheet" type="text/css" href="css/main.css">
+    <link id ="css" rel = "stylesheet" type="text/css" href="css/music.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src = "controls.js" async></script>
     <script src = "themeChanger.js" async></script>
@@ -17,7 +18,10 @@
     </header>
     <main>
         <section id="app">
-            <button id="btn">Toggle CSS</button>
+            <section id="btns">
+                <button id="btn">Toggle CSS</button>
+            </section>
+
             <input id="input" type="file" accept="audio/*"/>
 
 
