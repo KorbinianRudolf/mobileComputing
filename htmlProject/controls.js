@@ -1,6 +1,5 @@
 //TODO add a light theme or smthng cool, to make that shitshow of an app interesting
 
-
 // code music player
 
 var player = document.getElementById('music');
