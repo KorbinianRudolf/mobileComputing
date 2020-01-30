@@ -92,6 +92,8 @@ header {
 
 
 #btn {
-    color: black
+    color: black;
+    text-align: center;
+    width: 5rem;
 }
 
