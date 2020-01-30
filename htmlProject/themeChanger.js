@@ -9,10 +9,10 @@ function toggleTheme() {
 
     if (href == "css/music.css") {
         nL.setAttribute("href", "css/musicLight.css");
-        document.getElementById("#btn").innerText = "Dunkel"
+        document.getElementById("#btn").innerHTML = "Dunkel"
     } else {
         nL.setAttribute("href", "css/music.css");
-        document.getElementById("#btn").innerText = "Hell"
+        document.getElementById("#btn").innerHTML = "Hell"
     }
 
     const parent = oL.parentNode;
