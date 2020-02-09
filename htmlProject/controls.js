@@ -31,6 +31,11 @@ inputNode.addEventListener('change', playSelectedFile, false);
 //eventListener for the rotation
 window.addEventListener("deviceorientation", function(event) {
 
+    if(!(event.alpha || event.beta || event.gamma)) {
+        alert("Hallo, sieht so aus, als würde dieses Gerät kein Gyroskop o.Ä. besitzen. \n" +
+            "Versuchen sie es mal mit einem Handy.")
+    }
+
     const alpha = Math.round(event.alpha);
     playPause(Math.round(event.beta));
     volume(alpha);
